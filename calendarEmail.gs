@@ -1,11 +1,12 @@
 function calendarEmail() {
   const myCalendar = CalendarApp.getCalendarById('your_calendar_id'); // This is placing your calendar into a constant variable
   let today = new Date(); // This is getting todays date
-  let event = myCalendar.getEventsForDay(today); // This is an array, list, of all events happening this day in your calendar
+  let event = myCalendar.getEventsForDay(today); // This is an array (list) of all events happening this day in your calendar
   let confirmedAttendees = []; // This will hold the emails of the people who have confirmed to attend your event
 
+  // This is looping through all the events happening on the given day.
   for (let i = 0; i < event.length; i++) {
-    let attendees = event[i].getGuestList(); // This is placing an attendee on your event guest list into a variable
+    let attendees = event[i].getGuestList(); // This is placing all attendees from the current event on your event guest list into an array.
 
     for (let j = 0; j < attendees.length; j++) {
     // This is saying that if this attendee's status for the event is YES and that you are the event owner,
@@ -21,7 +22,7 @@ function calendarEmail() {
   let body = 'Hey dude, we got stuff to do today!';
 
   // This loops through the whole list of confirmed attendees and sends the email out to them from your email.
-  for (let i = 0; i < confirmedAttendees.length; i++) {
-    GmailApp.sendEmail(confirmedAttendees[i], subject, body);
+  for (let k = 0; k < confirmedAttendees.length; k++) {
+    GmailApp.sendEmail(confirmedAttendees[k], subject, body);
   }
 }
