@@ -20,7 +20,7 @@ function calendarEmail() {
   }
 
   // The subject and body is what is placed into the email that will be going out to the confirmed attendees. 
-  let subject = 'Something about reminding said person!';
+  let subject = "Meeting Today!";
 
   // This loops through the whole list of confirmed attendees and sends the email out to them from your email.
   for (let k = 0; k < confirmedAttendees.length; k++) {
