@@ -47,3 +47,6 @@ event[i].getColor() === "1"
 ```
 ## The First Time
 The first time this function runs it is going to ask you if you want to give permission to this function to use your email and basic Google functions. Answer yes and that should be the only time that it will ask that, but please note that even though you answered yes the function did not run. The best way to have this ready to go for future runs is to manually run it by clicking "Run" on the top of the Apps Script editor, then clicking ok to allow the function to have your permissions, and then it will be ready to go afterwards.
+
+## Subject and Body
+The subject and body variables are used for the email that gets sent out to the confirmed attendees for each given event that day. Continue this later today MIKEY!
