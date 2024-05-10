@@ -7,7 +7,7 @@ To get started you can go to [Google Apps Script](https://www.google.com/script/
 In order to make use of this script you'll need to have the id for the calendar that you are planning on using this on.
 1. Locate the id by going to your calendar view and clicking on the three stacked dots next to your calendar and select "Settings and sharing"
 2. Scroll down until you see "Integrate calendar" and right under that you will see the Calendar ID (copy the whole thing).
-3. If you didn't copy and paste the code from this repository into your editor then you should create a variable called myCalendar, otherwise set myCalendar using the calendar id you just grabbed as such:
+3. If you didn't copy and paste the code from this repository into your editor then you should create a variable called myCalendar, otherwise set myCalendar using the calendar id you just grabbed as such (inside the quotes):
     ```
     const myCalendar = CalendarApp.getCalendarByID('your_calendar_id');
     ```
