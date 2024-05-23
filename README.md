@@ -1,7 +1,7 @@
 # CalendarEmail
-Apps Script that sends email to people who have confirmed they are attending an event you have created in Google Calendar.
+A script that sends email to people who have confirmed they are attending an event you have created in Google Calendar.
 ## Calendar ID
-To get started you can go to [Google Apps Script](https://www.google.com/script/start/) and click on the "Start Scripting" Button. That should open up the editor for you and on the top of the page on the left hand side you can click the "New project" button, if you've already started and wanted to return to your script already you can select "My Projects" instead. You should also rename the function to match what it will be doing, ex. CalendarEmail. Once in you can copy and paste the contents of this file into your new function.
+To get started you can go to [Google Apps Script](https://www.google.com/script/start/) and click on the "Start Scripting" Button. That should open up the editor for you and on the top of the page on the left hand side you can click the "New project" button, if you've already started and wanted to return to your script you can select "My Projects" instead. You should also rename the function to match what it will be doing, ex. CalendarEmail. Once in you can copy and paste the contents of this file into your new function.
 
 
 In order to make use of this script you'll need to have the id for the calendar that you are planning on using this on.
@@ -22,7 +22,7 @@ It should resemble the following:
 5. Select time of day: Whenever you want the email to send out
 
 ## Important
-In the if statement on line 15 there is a method called "getColor()" and it's checking to see if that is equal to a certain "number". This color is in reference to the event color and not the calendar's color. It is possible to have the same color for the calendar and the event, but this method is checking specifically for the event's color. There is a list of what "numbers" correspond to what colors and I will link that [here](https://google-calendar-simple-api.readthedocs.io/en/latest/colors.html). There are only 11 event colors and depending on how you have the color set for your calendar, Classic or Modern, it might appear different. Look over the event colors in the link and choose one of those colors for this function and your events.
+In the if statement on line 15 there is a method called "getColor()" and it's checking to see if that is equal to a certain "number". This color is in reference to the event color and not the calendar's color. It is possible to have the same color for the calendar and the event, but this method is checking specifically for the event's color. There is a list of which "numbers" correspond to the colors and I will link that [here](https://google-calendar-simple-api.readthedocs.io/en/latest/colors.html). There are only 11 event colors and depending on how you have the color set for your calendar, Classic or Modern, it might appear different. Look over the event colors in the link and choose one of those colors for this function and your events.
 
 ## Colors
 1. Lavender
@@ -49,4 +49,4 @@ event[i].getColor() === "1"
 The first time this function runs it is going to ask you if you want to give permission to this function to use your email and basic Google functions. Answer yes and that should be the only time that it will ask that, but please note that even though you answered yes the function did not run. The best way to have this ready to go for future runs is to manually run it by clicking "Run" on the top of the Apps Script editor, then clicking ok to allow the function to have your permissions, and then it will be ready to go afterwards.
 
 ## Subject and Body
-The subject and body variables are used for the email that gets sent out to the confirmed attendees for each given event that day. Continue this later today MIKEY!
+The subject and body variables are used for the email that gets sent out to the confirmed attendees for each given event that day. I'm currently working on what I could do to have the name implemented in the body of the email, the only issue I'm running into is that it is possible that people don't have it set so that their names are visible. Continue this later MIKEY!
