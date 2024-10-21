@@ -1,9 +1,8 @@
 function calendarEmail() {
   const myCalendar = CalendarApp.getCalendarById('your_calendar_id'); // This is placing your calendar into a constant variable
-  const today = new Date(); // This is getting todays date
+  const today = new Date();
   const event = calendarID.getEventsForDay(today); // This is an array (list) of all events happening this day in your calendar
-  const confirmedAttendees = []; // This will hold the emails of the people who have confirmed to attend your event
-  //const guestNames = []; // This is storing their names to be used in the email
+  const confirmedAttendees = [];
 
   // This is looping through all the events happening on the given day.
   for (let i = 0; i < event.length; i++) {
@@ -21,7 +20,7 @@ function calendarEmail() {
 
   // The subject and body is what is placed into the email that will be going out to the confirmed attendees. 
   let subject = "Meeting Today!";
-  let body = `Hello, we got stuff to do today!`;
+  let body = "Hello, we got stuff to do today!";
 
   // This loops through the whole list of confirmed attendees and sends the email out to them from your email.
   for (let k = 0; k < confirmedAttendees.length; k++) {
